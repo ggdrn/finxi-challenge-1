@@ -1,9 +1,10 @@
 <template>
-  <div></div>
+  <div>
+    <img :src="gifUrl" alt />
+  </div>
 </template>
 
 <script>
-export default {};
 </script>
 
 <style>
