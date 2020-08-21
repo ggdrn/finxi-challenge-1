@@ -2,7 +2,7 @@ import { giphy } from "@/utils/giphy-instance";
 import api from "../utils/api-instance";
 
 export const getRandomGif = async () => {
-  const { data } = await giphy.get(`/random?api_key=${process.env.VUE_APP_API_KEY_GIPHY}`);
+  const { data } = await giphy.get(`/random?api_key=RdlbVVe7uKnSxCMUvHQjTlqeSJNw7khH`);
   return data;
 };
 
