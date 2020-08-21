@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const giphy = axios.create({
-  baseURL: `https://api.giphy.com/v1/gifs`
+export const api = axios.create({
+  baseURL: `http://apiurl.com/`
 });
 
 const onError = ({ message, stack }) => {
@@ -9,5 +9,5 @@ const onError = ({ message, stack }) => {
   return { data: false };
 };
 
-giphy.interceptors.response.use(({ data }) => data, onError);
-export default giphy;
+api.interceptors.response.use(({ data }) => data, onError);
+export default api;
