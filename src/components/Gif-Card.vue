@@ -30,16 +30,18 @@ export default {
   props: { item: Object },
   components: { Modal },
   data: () => ({
-    likes: Math.ceil(Math.random() * 100),
-    comments: Math.ceil(Math.random() * 10),
+    likes: Math.ceil(Math.random() * 100), //likes generator in a range of 0 to 100
+    comments: Math.ceil(Math.random() * 10), //comments generator in a range of 0 to 10
     open: false,
   }),
   methods: {
     closed() {
+      //close modal
       this.open = !this.open;
     },
   },
   computed: {
+    //computed props
     title: (vue) => {
       let title =
         vue.item.title == "" ? "Sem título" : vue.item.title.toUpperCase();

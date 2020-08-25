@@ -51,10 +51,12 @@ export default {
     loading: false,
   }),
   methods: {
+    //first search
     async search() {
       this.items = await getGifs(this.query, this.page);
       this.finished = false;
     },
+    //search after finding footer, doing infinite loading until you finish gifs
     async intersected() {
       if (this.items.length && !this.finished) {
         this.loading = true;

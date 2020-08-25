@@ -1,3 +1,5 @@
+//instance created to simulate communication with API
+
 import axios from "axios";
 
 export const api = axios.create({

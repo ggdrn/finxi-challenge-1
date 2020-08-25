@@ -7,9 +7,9 @@ export const getGifs = async (query, page) => {
 };
 
 
-// Simulando comunicação com API
+//Simulating communication with API
 
-//Salvando novo GIF
+//Saving new GIF
 export const saveGif = async (gif) => {
   /*
   gif = {
@@ -24,7 +24,7 @@ export const saveGif = async (gif) => {
   return data
 }
 
-//Atualizando novo GIF
+//Update GIF
 export const updateGif = async (id, updates) => {
   /*
   updates = {
@@ -38,7 +38,7 @@ export const updateGif = async (id, updates) => {
   return data
 }
 
-//Apagando GIF
+//Delete GIF
 export const deleteGif = async (id) => {
   /*
   gif = {

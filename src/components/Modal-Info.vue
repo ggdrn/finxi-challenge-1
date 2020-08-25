@@ -41,6 +41,7 @@ export default {
   },
 
   computed: {
+    //computed props
     show: (vue) => {
       return vue.open;
     },
