@@ -17,8 +17,7 @@ Para inicialização do projeto foi utilizado [CLI](https://cli.vuejs.org/) do V
 
 - **Instalação do GIT:** Realize o download [aqui](https://git-scm.com/downloads) e realize a instalção.
 - **Instalação do Docker:** Realize o download [aqui](https://www.docker.com/products/docker-desktop) e realize a instalção.
-
-* **Sem Docker:**
+### **Sem Docker:**
   É necessário a instalação do NodeJs 12.X e GIT para inicialização do projeto.
 
 * **Instalação do NodeJs:** [Acesse aqui](https://nodejs.org/en/download/) e realize o download do NodeJs 12.X.
