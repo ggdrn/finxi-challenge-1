@@ -17,22 +17,20 @@
     </sui-segment>
     <sui-segment inverted vertical aligned="center">
       <sui-container>
-        <sui-input
-          large
-          action
-          left
-          icon="search"
-          v-model="query"
-          @keyup.enter="search()"
-          placeholder="buscar"
-        ></sui-input>
-        <sui-button @click="search()">Buscar</sui-button>
+        <sui-input large action left v-model="query" @keyup.enter="search()" placeholder="Buscar"></sui-input>
+        <sui-button icon="search" basic color="yellow" style="margin:10px" @click="search()"></sui-button>
       </sui-container>
     </sui-segment>
     <sui-container aligned="center">
       <sui-grid :columns="3">
         <Gif v-for="item in items" :item="item" :key="item.id" />
       </sui-grid>
+      <sui-segment inverted aligned="center" v-if="loading">
+        <sui-icon name="spinner" loading />
+      </sui-segment>
+      <sui-segment inverted aligned="center" v-if="finished">
+        <strong>Não há mais gifs a ser carregado, busque por outro tema e termine de matar Lord Sith de rir! 😂</strong>
+      </sui-segment>
     </sui-container>
     <Observer @intersect="intersected" />
   </div>
@@ -50,18 +48,20 @@ export default {
     query: "",
     page: 0,
     finished: false,
+    loading: false,
   }),
   methods: {
     async search() {
       this.items = await getGifs(this.query, this.page);
+      this.finished = false;
     },
     async intersected() {
       if (this.items.length && !this.finished) {
-        let items = await getGifs(this.query, (this.page += 24));
-        items.length <= this.items.length
-          ? (this.finished = true)
-          : (this.finished = false);
+        this.loading = true;
+        let items = await getGifs(this.query, (this.page += 12));
+        items.length < 12 ? (this.finished = true) : (this.finished = false);
         this.items = [...this.items, ...items];
+        this.loading = false;
       }
     },
   },
