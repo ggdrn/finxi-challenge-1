@@ -8,7 +8,7 @@ O projeto foi todo desenvolvido com o Framework JavaScript VueJs.
 
 O projeto foi colocado em um contâiner Docker.
 
-Para inicialização do projeto foi utilizado [CLI](https://cli.vuejs.org/) do.
+Para inicialização do projeto foi utilizado [CLI](https://cli.vuejs.org/) do VueJS.
 
 ## Requisitos necessários
 
