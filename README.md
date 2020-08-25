@@ -64,4 +64,4 @@ npm run serve
 
 ## Projeto inicializado
 
-Ao inicializar o projeto este poderá ser acessado em: **http://localhost:8080**
+Ao inicializar o projeto, este poderá ser acessado em: **http://localhost:8080**
