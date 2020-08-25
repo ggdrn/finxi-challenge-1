@@ -40,6 +40,8 @@ git clone https://github.com/lmaiaa/finxi-challenge.git
 Acesse a pasta clonada e inicialize o projeto com o seguinte comando:
 
 ```
+cd finxi-challenge
+
 docker-compose up -d --build
 ```
 
