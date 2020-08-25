@@ -2,7 +2,7 @@ import { giphy } from "@/utils/giphy-instance";
 import api from "../utils/api-instance";
 
 export const getGifs = async (query, page) => {
-  const { data } = await giphy.get(encodeURI(`/search?api_key=RdlbVVe7uKnSxCMUvHQjTlqeSJNw7khH&q=${query}&offset=${page}&lang=pt`));
+  const { data } = await giphy.get(`/search?api_key=RdlbVVe7uKnSxCMUvHQjTlqeSJNw7khH&q=${query}&limit=12&offset=${page}&lang=pt`);
   return data;
 };
 
