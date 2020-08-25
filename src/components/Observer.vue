@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style>
+.observer {
+  height: 1px;
+}
 </style>
